@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <h1>Scholarship Finder</h1>
+        <p>Find the best scholarships and financial aid opportunities for you!</p>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search scholarships...">
+            <button onclick="searchScholarships()">Search</button>
+            <button id="openLoginPopup">Login</button>
+            <button id="openSignupPopup">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="scholarship-list" id="scholarship-list">
+            <!-- Scholarship cards will be dynamically added here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Scholarship Finder. All rights reserved.</p>
+    </footer>
+
+    <!-- Pop-up Login Form -->
+    <div class="overlay-container" id="loginOverlay">
+        <div class="popup-box">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label class="form-label" for="username">Username:</label>
+                <input type="text" id="username" class="form-input" required>
+
+                <label class="form-label" for="password">Password:</label>
+                <input type="password" id="password" class="form-input" required>
+                <input type="checkbox" id="showPassword"> 
+                <label for="showPassword" style="display: inline;">Show Password</label>
+
+                <button type="submit" class="btn-submit">Submit</button>
+                <button type="button" class="btn-close-popup" id="closeLoginPopup">Close</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Pop-up Sign Up Form -->
+    <div class="overlay-container" id="signupOverlay">
+        <div class="popup-box">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <label class="form-label" for="newUsername">Username:</label>
+                <input type="text" id="newUsername" class="form-input" required>
+
+                <label class="form-label" for="newEmail">Email:</label>
+                <input type="email" id="newEmail" class="form-input" required>
+
+                <label class="form-label" for="newPassword">Password:</label>
+                <input type="password" id="newPassword" class="form-input" required>
+                <input type="checkbox" id="showSignupPassword"> 
+                <label for="showSignupPassword" style="display: inline;">Show Password</label>
+
+                <button type="submit" class="btn-submit">Sign Up</button>
+                <button type="button" class="btn-close-popup" id="closeSignupPopup">Close</button>
+            </form>
+            <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
